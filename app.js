@@ -19,12 +19,12 @@ async function fetchQuestions() {
       // we add the question to the div
       categoryDiv.textContent = question.question;
       // if the difficulty is x set the background color to this
-      if (question.difficulty === "low") {
-        categoryDiv.style.backgroundColor = "#1A5276";
+      if (question.difficulty === "easy") {
+        categoryDiv.style.backgroundColor = "#F39C12";
       } else if (question.difficulty === "medium") {
-        categoryDiv.style.backgroundColor = "#CA6F1E";
+        categoryDiv.style.backgroundColor = "#239B56";
       } else if (question.difficulty === "hard") {
-        categoryDiv.style.backgroundColor = "#616A6B";
+        categoryDiv.style.backgroundColor = "#8E44AD";
       }
       // we create our array of options for the answers
       const answers = [
@@ -82,9 +82,7 @@ async function fetchQuestions() {
     displayScore.classList.add("score");
     container[0].append(displayScore);
     submit[0].addEventListener("click", () => {
-      var notes = [note];
-      var finalNote = notes.reduce((sum, value) => sum + value);
-      displayScore.textContent = `Your score is ${finalNote}/10`;
+      displayScore.textContent = `Your score is ${note}/10`;
     });
   }
   displayFinalScore();

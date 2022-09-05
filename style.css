@@ -13,23 +13,29 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F2F4F4;
 }
 .questions{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: gray;
+    background-color: #7B7D7D;
     padding: 2em;
     border-radius: 10px;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 2em;
 }
 .question{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: .5em;
-    margin: .25em;
-    background-color: rgb(112, 107, 107);
+    padding: .75em;
+    margin: .15em;
     color: white;
     border-radius: 5px;
 }
@@ -45,12 +51,6 @@ h1, h2{
     align-self: center;
     color: white;
 }
-.round{
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 20px;
-}
 select{
     border-radius: 5px;
 }
@@ -60,14 +60,23 @@ select{
     border-style: none;
     border-radius: 5px;
 }
-.submit:hover{
+.submit button:hover{
     cursor: pointer;
+}
+.submit button{
+    padding: 1em;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #C0392B;
+    color: white;
 }
 .score{
     color: white;
 }
 #reload{
     padding: 1em;
+    align-items: center;
+    align-self: center;
     color: azure;
     background-color: rgb(35, 37, 37);
     border-radius: 20px;
