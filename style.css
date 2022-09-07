@@ -73,15 +73,3 @@ select{
 .score{
     color: white;
 }
-#reload{
-    padding: 1em;
-    align-items: center;
-    align-self: center;
-    color: azure;
-    background-color: rgb(35, 37, 37);
-    border-radius: 20px;
-    transition: all .2s ease;
-}
-.spin{
-    transform:rotateZ(3600deg);
-}

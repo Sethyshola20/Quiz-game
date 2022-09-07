@@ -110,11 +110,4 @@ function shuffle(array) {
   return array;
 }
 
-function reload() {
-  const reloadbtn = document.getElementsById("reload");
-  reloadbtn[0].addEventListener("click", function () {
-    reloadbtn.classList.add("spin");
-  });
-}
-
 // display the score
