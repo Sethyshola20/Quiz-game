@@ -20,11 +20,11 @@ async function fetchQuestions() {
       categoryDiv.textContent = question.question;
       // if the difficulty is x set the background color to this
       if (question.difficulty === "easy") {
-        categoryDiv.style.backgroundColor = "#F39C12";
+        categoryDiv.style.backgroundColor = "rgba(0, 184, 163, .8)";
       } else if (question.difficulty === "medium") {
-        categoryDiv.style.backgroundColor = "#239B56";
+        categoryDiv.style.backgroundColor = "rgba(255, 192, 30, .8)";
       } else if (question.difficulty === "hard") {
-        categoryDiv.style.backgroundColor = "#8E44AD";
+        categoryDiv.style.backgroundColor = "rgba(239, 71, 67, .8)";
       }
       // we create our array of options for the answers
       const answers = [
@@ -77,11 +77,11 @@ async function fetchQuestions() {
     });
   }
   function displayFinalScore() {
-    const submit = document.getElementsByClassName("submit");
+    const submit = document.getElementById("submit");
     const displayScore = document.createElement("div");
     displayScore.classList.add("score");
     container[0].append(displayScore);
-    submit[0].addEventListener("click", () => {
+    submit.addEventListener("click", () => {
       displayScore.textContent = `Your score is ${note}/10`;
     });
   }
@@ -109,5 +109,10 @@ function shuffle(array) {
   }
   return array;
 }
+
+const refresh = document.getElementById("refresh");
+refresh.addEventListener("click", () => {
+  window.location.reload();
+});
 
 // display the score
