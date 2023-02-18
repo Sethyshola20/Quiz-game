@@ -6,7 +6,6 @@ async function fetchQuestions() {
   const url = `https://the-trivia-api.com/api/questions?limit=${count}`;
   const res = await fetch(url);
   const questions = await res.json();
-  console.log(questions);
 
   function createQuestion() {
     questions.forEach((question) => {
@@ -71,7 +70,6 @@ async function fetchQuestions() {
         const userInput = select.options[select.selectedIndex].value;
         if (userInput === question.correctAnswer) {
           note++;
-          console.log(note);
         }
       });
     });
